@@ -7,15 +7,14 @@
         <div class="col-md-6">
             <ul>
                 <div class="row">
-                    <li *ngFor="let quote of quotes"; let i = index class="mt-5 col-md-6 ">
+                    <li *ngFor="let quote of quotes; let i = index" class="mt-5 col-md-6 ">
                         <p>
                             {{quote.id}}
                             {{ quote. quoteName }} <br>
-                            <button class=" btn btn-dark mt-5">{{quote.voteUp}}Like</button> <br> <br>
-                            <button class=" btn btn-dark">{{quote.voteDown}}Dislike</button>
                             <button (click)='toggleDetails(i)'>See More</button>
+                            <app-quote-details *ngIf='quote.showVote'  [quote]="quote"> </app-quote-details>
                         </p>
-                        <app-quote-details *ngIf='quote.showVote'  [quote]="quote"> </app-quote-details>
+                       
                     </li>
                 </div>
                

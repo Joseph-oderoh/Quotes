@@ -15,7 +15,9 @@ export class QuotesComponent implements OnInit {
     new Quote(3,"Blaco","Take me back to the time we met", 0, 0 ),
     new Quote(4,"Joseph","Be you, do you,for you", 0, 0 )
   ]
-
+  toggleDetails(index: number){
+    this.quotes[index].showVote = !this.quotes[index].showVote;
+  }
   constructor() { }
 
   ngOnInit(): void {
