@@ -3,11 +3,14 @@ p{
     border: 2px solid black;
     padding: 50px;
     border-radius: 45px;
-   background-color: wheat;
+   background-color: rgba(245, 222, 179, 0.763);
 }
 .container{
-    background-color: rgba(0, 0, 0, 0.334);
+    background-color: rgba(0, 0, 0, 0.57);
 }
  ul li{
      list-style-type: none;
+ }
+ .row{
+    background-color: rgba(255, 255, 255, 0.407);
  }

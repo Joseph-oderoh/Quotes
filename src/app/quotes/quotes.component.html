@@ -11,8 +11,8 @@
                         <p>
                             {{quote.id}}
                             {{ quote. quoteName }} <br>
-                            <button (click)='toggleDetails(i)'>See More</button>
-                            <app-quote-details *ngIf='quote.showVote'  [quote]="quote"> </app-quote-details>
+                            <button class="btn btn-success mt-5" (click)='toggleDetails(i)'>See More</button>
+                            <app-quote-details *ngIf='quote.showVote'  [quote]="quote" (isComplete)='deleteQuote($event,i)'> </app-quote-details>
                         </p>
                        
                     </li>

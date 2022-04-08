@@ -1,2 +1,3 @@
-<button class=" btn btn-outline-danger mt-5">{{quote.voteUp}}Like</button> <br> <br>
-<button class=" btn btn-outline-success">{{quote.voteDown}}Dislike</button>
+<button class=" btn btn-success mt-3">{{quote.voteUp}}Like <i class="fa fa-thumbs-up" id="like"></i></button> <br> <br>
+<button class=" btn btn-danger mt-3">{{quote.voteDown}}Dislike</button> <br> <br>
+<button class="btn btn-outline-danger" (click)= 'quoteDelete(true)'>Delete</button> 

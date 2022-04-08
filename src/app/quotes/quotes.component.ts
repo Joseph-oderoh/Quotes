@@ -18,6 +18,12 @@ export class QuotesComponent implements OnInit {
   toggleDetails(index: number){
     this.quotes[index].showVote = !this.quotes[index].showVote;
   }
+  deleteQuote(isComplete:any, index: number){
+    if (isComplete){
+      let toDelete = confirm(`Do you want to delete this ${this.quotes[index].name}`)
+      this.quotes.slice(index,1);
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
