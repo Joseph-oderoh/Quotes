@@ -1,0 +1,13 @@
+p{
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 50px;
+    border-radius: 45px;
+   background-color: wheat;
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.334);
+}
+ ul li{
+     list-style-type: none;
+ }

@@ -1,7 +1,26 @@
 <app-navbar></app-navbar>
 <div class="container">
-    <h3 *ngFor="let quote of quotes" >
-        {{ quote. quoteName }}
-    </h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Quote Form</h2>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <div class="row">
+                    <li *ngFor="let quote of quotes" class="mt-5 col-md-6 ">
+                        <p>
+                            {{quote.id}}
+                            {{ quote. quoteName }} <br>
+                            <button class=" btn btn-dark mt-5">{{quote.voteUp}}</button> <br> <br>
+                            <button class=" btn btn-dark">{{quote.voteDown}}</button>
+                        </p>
+                       
+                    </li>
+                </div>
+               
+            </ul>
+           
+        </div>
+    </div>
     
 </div>
