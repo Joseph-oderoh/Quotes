@@ -1,0 +1,19 @@
+h1{
+    color: blue;
+    font-family: Inspiration; 
+    font-size: 6em;
+}
+span{
+    font-weight: 800;
+    color: white;
+    justify-content: stretch;
+}
+nav{
+   gap: 400px;
+    text-align: center;
+}
+p{
+    color: whitesmoke;
+    font-size: 4em;
+    font-family: cursive;
+}
