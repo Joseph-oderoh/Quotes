@@ -21,3 +21,8 @@ p{
      background-color: grey;
      display: flex;
  }
+  .date{
+      font-family: Beau Rivage;
+      color: red;
+      font-weight: 500;
+  }
