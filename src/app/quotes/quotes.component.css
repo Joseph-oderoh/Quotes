@@ -29,3 +29,8 @@ p{
     background-color: rgba(132, 119, 119, 0.478);
     height: 500px;
 }
+
+fotter{
+    max-width: 400px;
+    margin: 30px auto;
+}
