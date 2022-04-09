@@ -2,7 +2,7 @@ export class Quote {
     showVote: boolean
     constructor(id: number, yourName: string, quoteName: string, postedDate: Date, voteUp: number, voteDown: number,){
         this.id = id;
-        this.name = yourName;
+        this. Yourname = yourName;
         this.quoteName = quoteName;
         this.postedDate = postedDate;
         this.voteUp= voteUp;
@@ -10,7 +10,7 @@ export class Quote {
         this.showVote=false
     }
     id: number;
-    name: string;
+    Yourname: string;
     quoteName: string;
     postedDate: Date;
     voteUp: number;
