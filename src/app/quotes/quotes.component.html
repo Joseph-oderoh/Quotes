@@ -15,9 +15,12 @@
                             {{ quote. quoteName }} <br>
                             <button class="btn btn-success mt-5" (click)='toggleDetails(i)'>See More</button>
                             <app-quote-details *ngIf='quote.showVote'  [quote]="quote" (isComplete)='deleteQuote($event,i)'> </app-quote-details>
+
                         </p>
-                        <button class=" btn btn-success mt-3 m-3" (click)="voteUp(i)" >{{quote.voteUp}}voteUP </button> 
-                        <button class=" btn btn-danger mt- " (click)="voteDown(i)">{{quote.voteDown}}voteDown</button> 
+                       <div class="container1">
+                        <button class=" btn btn-success mt-3 m-3" (click)="voteUp(i)" >{{quote.voteUp}}voteUP </button>
+                        <button class=" btn btn-danger m-3 " (click)="voteDown(i)">{{quote.voteDown}}voteDown</button>
+                       </div>
                     </li>
                   
                    
