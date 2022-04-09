@@ -8,14 +8,19 @@
             <ul>
                 <div class="row">
                     <li *ngFor="let quote of quotes; let i = index" class="mt-5 col-md-6 ">
-                        <p>
+                        <h1 class="text-center">Quotezz {{quote.id}}</h1>
+
+                        <p> 
                             {{quote.id}}
                             {{ quote. quoteName }} <br>
                             <button class="btn btn-success mt-5" (click)='toggleDetails(i)'>See More</button>
                             <app-quote-details *ngIf='quote.showVote'  [quote]="quote" (isComplete)='deleteQuote($event,i)'> </app-quote-details>
                         </p>
-                       
+                        <button class=" btn btn-success mt-3 m-3" (click)="voteUp(i)" >{{quote.voteUp}}voteUP </button> 
+                        <button class=" btn btn-danger mt- " (click)="voteDown(i)">{{quote.voteDown}}voteDown</button> 
                     </li>
+                  
+                   
                 </div>
                
             </ul>
