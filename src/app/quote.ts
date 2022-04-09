@@ -1,18 +1,18 @@
 export class Quote {
     showVote: boolean
-    constructor(id: number, yourName: string, quoteName: string, postedDate: Date, voteUp: number, voteDown: number,){
+    constructor(id: number, Yourname: string, Quote: string, postDate: Date, voteUp: number, voteDown: number,){
         this.id = id;
-        this. Yourname = yourName;
-        this.quoteName = quoteName;
-        this.postedDate = postedDate;
+        this. Yourname = Yourname;
+        this.Quote = Quote;
+        this.postDate = postDate;
         this.voteUp= voteUp;
         this.voteDown = voteDown;
         this.showVote=false
     }
     id: number;
     Yourname: string;
-    quoteName: string;
-    postedDate: Date;
+    Quote: string;
+    postDate: Date;
     voteUp: number;
     voteDown: number;
 

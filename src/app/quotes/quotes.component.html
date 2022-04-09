@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-md-6">
             <h2>Quote Form</h2>
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
         <div class="col-md-6">
             <ul>
@@ -12,7 +13,7 @@
                         <h1 class="text-center">Quotezz {{quote.id}}</h1>
                         <p>
                             {{quote.id}}
-                            {{ quote. quoteName }} <br> posted on   <span class="date mt-5" >  {{ quote.postedDate|date}} </span><br>
+                            {{ quote.Quote }} <br> posted on   <span class="date mt-5" >  {{ quote.postDate|date}} </span><br>
                             <button class="btn btn-success mt-5" (click)='toggleDetails(i)'>See More</button>
                             <app-quote-details *ngIf='quote.showVote'  [quote]="quote" (isComplete)='deleteQuote($event,i)'> </app-quote-details>
                         </p>

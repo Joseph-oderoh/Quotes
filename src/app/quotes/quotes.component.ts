@@ -33,6 +33,13 @@ export class QuotesComponent implements OnInit {
   voteDown(i:  number) {
     this.quotes[i].voteDown ++;
   }
+
+  addNewQuote(quote: Quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.postDate = new Date(quote.postDate)
+    this.quotes.push(quote)
+  }
   
 
   constructor() { }
