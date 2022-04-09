@@ -12,8 +12,7 @@
                     <li *ngFor="let quote of quotes; let i = index" class="mt-5 col-md-12 ">
 
                         <h1 class="text-center text-info">Quotezz {{quote.id}}</h1> 
-                        <div *ngIf="quote.voteUp == highest && quote.voteUp > 0; then  highlight else empty"></div>
-
+                        <div *ngIf="quote.voteUp == highest && quote.voteUp >0; then  highlight else empty"></div>
                         <ng-template #highlight>
                             <p appHighlight >
                                 {{quote.id}}
@@ -21,6 +20,7 @@
                                 <button class="btn btn-success mt-5" (click)='toggleDetails(i)'>See More</button>
                                 <app-quote-details *ngIf='quote.showVote'  [quote]="quote" (isComplete)='deleteQuote($event,i)'> </app-quote-details>
                             </p>
+                            
                         </ng-template>
                         <ng-template #empty>
                             <p>
@@ -29,11 +29,12 @@
                                 <button class="btn btn-success mt-5" (click)='toggleDetails(i)'>See More</button>
                                 <app-quote-details *ngIf='quote.showVote'  [quote]="quote" (isComplete)='deleteQuote($event,i)'> </app-quote-details>
                             </p>
+                           
                         </ng-template>
-                          
+                        <button class=" btn btn-success mt-3 m-3" (click)="voteUp(i)">{{quote.voteUp}}  voteUP  <i class="fa fa-thumbs-up" id="voteUP"></i></button>
+                        <button class=" btn btn-danger m-3 " (click)="voteDown(i)">{{quote.voteDown}}  voteDown <i class="fa fa-thumbs-down" id="voteDown"></i></button>
                        <div class="container1">
-                        <button class=" btn btn-success mt-3 m-3" (click)="voteUp(i)">{{quote.voteUp}} "" voteUP  <i class="fa fa-thumbs-up" id="voteUP"></i></button>
-                        <button class=" btn btn-danger m-3 " (click)="voteDown(i)">{{quote.voteDown}} "" voteDown <i class="fa fa-thumbs-down" id="voteDown"></i></button>
+                     
                        </div>
                     </li>
                 </div>
