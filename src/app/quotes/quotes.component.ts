@@ -40,8 +40,25 @@ export class QuotesComponent implements OnInit {
     quote.postDate = new Date(quote.postDate)
     this.quotes.push(quote)
   }
-  
 
+  // preNum!:number
+  // lastNum!:number
+  // counter!:number
+
+  // highestUpvote(){
+  //   this.preNum = 0
+  //   this.lastNum = 0
+
+  //   for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+  //     this.lastNum = this.quotes[this.counter].voteUp;
+  //     if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+  //   }
+  //   return  this.preNum
+  // }
+
+
+   arry: number[] = this.quotes.map(quote =>quote.voteUp)
+highest = Math.max(...this.arry)
   constructor() { }
 
   ngOnInit(): void {
