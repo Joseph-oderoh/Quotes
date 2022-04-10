@@ -34,3 +34,7 @@ fotter{
     max-width: 400px;
     margin: 30px auto;
 }
+ .fa{
+     font-size: 2em;
+     cursor: pointer;
+ }
