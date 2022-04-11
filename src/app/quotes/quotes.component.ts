@@ -43,7 +43,7 @@ export class QuotesComponent implements OnInit {
   addNewQuote(quote: Quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength +1;
-    quote.postDate = new Date(quote.postDate)
+    quote.postedDate = new Date(quote.postedDate)
     this.quotes.push(quote)
   }
  
@@ -51,7 +51,7 @@ export class QuotesComponent implements OnInit {
      return quote.voteUp
    });
 
-   highestv(){
+   colorhigh(){
 
     this.preNum = 0
     this.lastNum = 0

@@ -1,7 +1,7 @@
 <div class="container">
     <h4>Delete this quote</h4> <br>
     <button class="btn btn-outline-danger" (click)= 'quoteDelete(true)'>Delete</button> <br> <br>
-    <p>This quote  will be complete in {{quote.postDate|dateCount}} days ago!</p>
+    <p>This quote  will be complete in {{quote.postedDate|dateCount}} days ago!</p>
     <h6 class="text-end">This was posted by @ {{quote.Yourname}}</h6>
 
         <p>
@@ -17,6 +17,6 @@
           Downvotes:{{quote.voteDown}}
         </p>
         <p>
-           Date {{quote.postDate|date}}
+           Date {{quote.postedDate|date}}
         </p>
 </div>

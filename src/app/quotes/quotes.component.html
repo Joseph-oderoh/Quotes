@@ -12,12 +12,12 @@
                     <li *ngFor="let quote of quotes; let i = index" class="mt-5 col-md-12 ">
 
                         <h1 class="text-center text-info">Quotezz {{quote.id}}</h1> 
-                        <div *ngIf="quote.voteUp == highestv() && quote.voteUp >0; then  highlight else empty"></div>
+                        <div *ngIf="quote.voteUp == colorhigh() && quote.voteUp >0; then  highlight else empty"></div>
                         <ng-template #highlight>
 
                             <p appHighlight >
                                 {{quote.id}}
-                                {{ quote.Quote }} <br> posted on   <span class="date mt-5" >  {{ quote.postDate|date}} </span><br>
+                                {{ quote.Quote }} <br> posted on   <span class="date mt-5" >  {{ quote.postedDate|date}} </span><br>
                                 <button class="btn btn-success mt-5" (click)='toggleDetails(i)'>See More</button>
                                 <app-quote-details *ngIf='quote.showVote'  [quote]="quote" (isComplete)='deleteQuote($event,i)'> </app-quote-details>
                                 <button class="  mt-3 m-3" (click)="voteUp(i)">{{quote.voteUp}}<span class="mdi mdi-thumb-up-outline"></span></button>
@@ -28,7 +28,7 @@
                         <ng-template #empty>
                             <p>
                                 {{quote.id}}
-                                {{ quote.Quote }} <br> posted on   <span class="date mt-5" >  {{ quote.postDate|date}} </span><br>
+                                {{ quote.Quote }} <br> posted on   <span class="date mt-5" >  {{ quote.postedDate|date}} </span><br>
                                 <button class="btn btn-success mt-5" (click)='toggleDetails(i)'>See More</button>
                                 <app-quote-details *ngIf='quote.showVote'  [quote]="quote" (isComplete)='deleteQuote($event,i)'> </app-quote-details>
                                 <button class="  mt-3 m-3" (click)="voteUp(i)">{{quote.voteUp}}<span class="mdi mdi-thumb-up-outline"></span></button>

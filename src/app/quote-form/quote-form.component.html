@@ -22,11 +22,12 @@
         </div>
         <div class="form-group mt-5">
             <label for="dateposted">Date Posted</label>
-            <input type='date' id="postDate" [(ngModel)]="newQuote.postDate" name="postDate" #postDate="ngModel" required>
-            <div *ngIf="postDate.invalid && postDate.dirty" class="alert alert-danger">
+            <input type='date' id="postDate" [(ngModel)]="newQuote.postedDate" name="postDate" #postedDate="ngModel" required>
+            <div *ngIf="postedDate.invalid && postedDate.dirty" class="alert alert-danger">
                 <p>Date is required</p>
               </div>
         </div>
-        <button type="submit" class="btn btn-success mt-5">Add Quote</button>
+        <button [disabled]="!quotesForm.valid"type="submit" class="btn btn-success">Add Quote</button>
+        <p class="form-error" *ngIf="!quotesForm.valid">
     </form>
   </div>
