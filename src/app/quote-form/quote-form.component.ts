@@ -14,6 +14,9 @@ export class QuoteFormComponent implements OnInit {
 this.addQuote.emit(this.newQuote);
     this.newQuote = new Quote(0,"","",new Date(),0,0);
   }
+
+  name = "Yourname"
+  myvar = "";
   constructor() { }
 
   ngOnInit(): void {
